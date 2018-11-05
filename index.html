@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>球儿DBM语音包 球儿PVP语音包 魔兽世界DBM语音包</title>
+		<meta name="keywords" content="球儿dbm,球儿dbm语音包,球儿语音包,球儿PVP语音包,球儿PVP技能提示,DBM语音包,球dbm">
+		<meta name="description" content="魔兽世界菜鸟玩家一枚，本语音包只是娱乐向作品，只供大家偶尔换换口味">
+		<style type="text/css">
+			* {margin: 0;padding: 0;}
+			body {font-family: Arial, Helvetica, "微软雅黑", "Microsoft YaHei", "Hei SC", sans-serif;text-rendering: optimizeLegibility;font-kerning: normal;}
+			button:focus { outline: 0;}
+			video { position: fixed; right: 0px; bottom: 0px; min-width: 100%; min-height: 100%; height: auto; width: auto;}
+			/*--------------------------默认样式--------------------------------------------*/
+			#container {padding-left: 5%;margin-top: 200px;position: relative;}
+			.title {font-size: 52px;color: #fff;font-weight: 700;text-shadow: 0 0 1px transparent, 0 0 5px rgba(0, 0, 0, .8);line-height: 1.5em;}
+			.cont {font-size: 22px;color: #ebdec2;font-weight: 300;text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);width: 800px;line-height: 1.5em;margin: 100px 0;}
+			.btn {display: flex;flex-direction: row;align-items: center;line-height: 1.5em;}
+			.btn button {font-size: 16px;color: #f7b10a;transition: background .2s, color .2s;cursor: pointer;width: 175px;height: 50px;line-height: 50px;margin-right: 25px;}
+			.btn>div {position: relative;}
+			.btn img {width: 175px;height: 175px;position: absolute;top: -195px;border-radius: 8px;display: none;}
+			.btn p {font-size: 14px;margin-top: 20px;}
+			.btn .pLink {color: #f8b700;cursor: pointer;text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);}
+			.btn .audio {padding-left: 20px;color: #eee;float: right;margin-right: 25px;cursor: pointer;}
+			/*.btn audio{display: none;}*/
+			.yellow {border: 1px solid #c77e19;background: rgba(0, 0, 0, .4);}
+			.yellow:hover {background: #b06601;color: #ffd36b;}
+			.red {border: 1px solid #ea3012;background: rgba(159, 22, 0, .6)}
+			.red:hover {background: #9f1600}
+			/*--------------------------宽度小于1280--------------------------------------------*/
+			@media screen and (max-width: 1280px) { .title {font-size: 46px;} .cont {font-size: 18px;} .btn button {font-size: 16px;} .btn p {font-size: 13px}}
+		</style>
+
+		
+	</head>
+
+	<body>
+
+		<video autoplay loop muted>
+			
+			<source src="http://down.qiuqiujiejie.com/video.mp4" type="video/mp4">
+			<!-- <source src="http://down.qiuqiujiejie.com/hellsing.mp4" type="video/mp4"> -->
+		</video>
+		<audio src="static/audio1.mp3" loop id="audio1"></audio>
+		<audio src="static/audio2.mp3" loop id="audio2"></audio>
+		<audio src="static/audio3.mp3" loop id="audio3"></audio>
+		<div id="container">
+			<div class="title">有一种青春叫魔兽世界</div>
+			<div class="cont">分享一份自个儿录制的DBM语音包，喜欢的盆友自行食用！本语音包只是娱乐向作品，只供大家偶尔换换口味~ emmmm</div>
+			<div class="btn">
+				<div>
+					<img src="static/QrCode.jpg" />
+					<button class="yellow Qrcode">打赏支持</button>
+					<p>
+						<span class="pLink">更新日志</span>
+					<!--	<span class="audio">试听</span> -->
+					</p>
+				</div>
+				<div>
+					<button class="red">球儿DBM语音包</button>
+					<p>
+						<span class="pLink">食用方法</span>
+						<span class="audio">试听</span>
+					</p>
+				</div>
+				<!--
+				<div>
+					<button class="red">球儿PVP语音包</button>
+					<p>
+						<span class="pLink">食用姿势</span>
+						<span class="audio">试听</span> 
+					</p>
+				</div>
+				-->
+
+			</div>
+		</div>
+	</body>
+
+<div style="display:none;">
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3c145bafb9f43b078fbcc6a42780bb36";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div> 
+
+
+</html>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+	//上面3个按钮链接
+	let btnLink = ["https://www.qiuqiujiejie.com/about.html", "http://down.qiuqiujiejie.com/QiuDBM20181103.zip?attname=", "https://www.qiuqiujiejie.com/pvpsm.html"];
+	//下面3个黄色文字 链接
+	let pLink = ["https://www.qiuqiujiejie.com/dbm.html", "https://www.qiuqiujiejie.com/dbmsm.html", "https://www.qiuqiujiejie.com/pvpsm.html"];
+
+	// 初始化 "container" 高度居中
+	$("#container").css({
+		"margin-top": ($(window).height() - $("#container").height()) / 2 + "px"
+	})
+	// 浏览器 宽高发生变化 
+	$(window).resize(function() {
+		$("#container").css({
+			"margin-top": ($(window).height() - $("#container").height()) / 2 + "px"
+		})
+	})
+	// 鼠标悬停 "了解更多" 弹出小程序二维码
+	$(".Qrcode").hover(function() {
+		$(this).siblings("img").stop().fadeIn(240);
+	}, function() {
+		$(this).siblings("img").stop().fadeOut(240);
+	})
+	//播放mp3
+	$(".audio").click(function() {
+		// 所有audio暂停播放，并重新加载 
+		let audios = document.getElementsByTagName("audio");
+		for(let i = 0; i < audios.length; i++) {
+			audios[i].pause();
+			audios[i].load();
+		}
+		//播放当前选择的音乐
+		let audio = audios[$(this).parent().parent().index()]
+		audio.play()
+	})
+	$(".btn .pLink").click(function(e) {
+		window.open(pLink[$(this).parent().parent().index()]);
+	})
+	$(".btn button").click(function() {
+		window.open(btnLink[$(this).parent().index()]);
+	})
+</script>
+
